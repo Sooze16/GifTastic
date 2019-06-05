@@ -1,0 +1,30 @@
+button,
+div,
+form,
+input {
+    margin: 10px;
+}
+
+body {
+    font-family: fantasy;
+    background-image: url(../assets/images/wall.jpg)
+}
+
+#comic-form {
+    font-family: fantasy;
+    color: orange;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(12, 8, 1)
+}
+
+#buttons-view {
+    text-align: center;
+}
+
+#buttons-view :hover {
+    color: orange !important
+}
