@@ -19,7 +19,7 @@ $(document).ready(function() {
 
                 // Creates a div to hold the comic
                 var comicName = $("<div>");
-                comicName.html("Comic Strip Title: " + response.data[i].title);
+                comicName.html("Comic Strip Title: " + response.data[i].title.toUpperCase());
                 $("#comic-view").prepend(comicName);
                 // Retrieves the Rating Data
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 // Creates an element to have the rating displayed
                 // Displays the rating
                 var rating = $("<div>");
-                rating.html("Comic rating: " + response.data[i].rating);
+                rating.html("Comic rating: " + response.data[i].rating.toUpperCase());
                 $("#comic-view").prepend(rating);
 
 
@@ -40,9 +40,18 @@ $(document).ready(function() {
                 image.attr("data-animate", response.data[i].images.fixed_height.url)
                 $("#comic-view").prepend(image);
 
+
+
             }
+
+            // $("#comic-view").val($(this).val().toUpperCase());
+
+
             // Puts the entire Comic above the previous .
         });
+
+
+
 
     }
     $(document).on("click", ".gif", function() {
@@ -93,6 +102,8 @@ $(document).ready(function() {
 
         // Calling renderButtons which handles the processing of our comic array
         renderButtons();
+
+        empty();
     });
 
     // Adding click event listeners to all elements with a class of "comic"
