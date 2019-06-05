@@ -6,7 +6,7 @@ $(document).ready(function() {
     function displayComicInfo() {
 
         var comicStrip = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + comicStrip + "&api_key=ZQbiPzhuI3qdufIfSHBSqxHsGUf7AtU1&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + comicStrip + "&api_key=ZQbiPzhuI3qdufIfSHBSqxHsGUf7AtU1&limit=10";
 
         // Creates AJAX call for the specific comic button being clicked
         $.ajax({
@@ -95,7 +95,7 @@ $(document).ready(function() {
     $("#add-character").on("click", function(event) {
         event.preventDefault();
         // This line of code will grab the input from the textbox
-        var comic = $("#comic-input").val().trim();
+        var comic = $("#comic-input").val("").trim();
 
         // The comic from the textbox is then added to our array
         comics.push(comic);
