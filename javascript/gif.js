@@ -19,7 +19,7 @@ $(document).ready(function() {
 
                 // Creates a div to hold the comic
                 var comicName = $("<div>");
-                comicName.html("Comic Strip Title: " + response.data[i].title.toUpperCase());
+                comicName.html("Comic Strip Title:    " + response.data[i].title.toUpperCase());
                 $("#comic-view").prepend(comicName);
                 // Retrieves the Rating Data
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
                 // Creates an element to have the rating displayed
                 // Displays the rating
                 var rating = $("<div>");
-                rating.html("Comic rating: " + response.data[i].rating.toUpperCase());
+                rating.html("Comic Rating:   " + response.data[i].rating.toUpperCase());
                 $("#comic-view").prepend(rating);
 
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
     $("#add-character").on("click", function(event) {
         event.preventDefault();
         // This line of code will grab the input from the textbox
-        var comic = $("#comic-input").val("").trim();
+        var comic = $("#comic-input").val().trim();
 
         // The comic from the textbox is then added to our array
         comics.push(comic);
@@ -103,7 +103,8 @@ $(document).ready(function() {
         // Calling renderButtons which handles the processing of our comic array
         renderButtons();
 
-        empty();
+        $("#comic-input").val("");
+
     });
 
     // Adding click event listeners to all elements with a class of "comic"
